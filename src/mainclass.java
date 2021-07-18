@@ -16,8 +16,10 @@ public class mainclass {
 		
 		System.out.println("Valid Email items :"); 
 		isEmail(dataitems);
-		System.out.println("Valid Phone Numbers"); 
-		isPhoneNumberValid(dataitems);
+		System.out.println("Valid Phone Numbers :"); 
+		isPhoneNumber(dataitems);
+		System.out.println("Valid Url :");
+		isUrlValid(dataitems);
 	}
 	
 	public static void isEmail(List<String> dataitems) {
@@ -54,6 +56,17 @@ public class mainclass {
 		//Initialize reg ex for phone number. 
 		String regex = "^\\(?(\\d{3})\\)?[- ]?(\\d{3})[- ]?(\\d{4})$";
 		
+		for(String data : dataitems) {
+			   boolean result = data.matches(regex);
+			   
+			   if(result) {
+				   System.out.format(" - %s \n", data);
+			   }
+		}
+	}
+	
+	public static void isUrlValid(List<String> dataitems){
+		String regex = "^(http|https?|ftp|file):\\/\\/?(www)[-a-zA-Z0-9+&@#\\/%?=~_|!:,.;]*[-a-zA-Z0-9+&@#\\/%=~_|]";
 		for(String data : dataitems) {
 			   boolean result = data.matches(regex);
 			   
