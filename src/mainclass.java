@@ -32,14 +32,14 @@ public class mainclass {
 		}
 		
 		/*^ matches the starting of the sentence.
-		[a-zA-Z0-9+_.-] matches one character from the English alphabet (both cases), digits, “+”, “_”, “.” and, “-” before the @ symbol.
+		[a-zA-Z0-9+_.-] matches one character from the English alphabet (both cases), digits, â€œ+â€, â€œ_â€, â€œ.â€ and, â€œ-â€ before the @ symbol.
 		+ indicates the repetition of the above-mentioned set of characters one or more times.
 		@ matches itself.
-		[a-zA-Z0-9.-] matches one character from the English alphabet (both cases), digits, “.” and “–” after the @ symbol.
+		[a-zA-Z0-9.-] matches one character from the English alphabet (both cases), digits, â€œ.â€ and â€œâ€“â€ after the @ symbol.
 		$ indicates the end of the sentence.*/
 	}
 	
-	public static void isPhoneNumberValid(List<String> dataitems){
+	public static void isPhoneNumber(List<String> dataitems){
 		/* Phone Number formats: (nnn)nnn-nnnn; nnnnnnnnnn; nnn-nnn-nnnn
 		    ^\\(? : May start with an option "(" .
 		    (\\d{3}): Followed by 3 digits.
